@@ -272,26 +272,6 @@
 				}
 			});
 
-
-			$("#navList").append('<li><a id="blog_nav_myyoulian" class="menu" href="https://www.cnblogs.com/SelenBlog/">);
-			//添加标签icon
-			$('#blog_nav_myhome').prepend('<i class="fa fa-fort-awesome" aria-hidden="true"></i>');
-			$('#blog_nav_contact').prepend('<i class="fa fa-address-book-o" aria-hidden="true"></i>');
-			$('#blog_nav_rss').prepend('<i class="fa fa-rss faa-pulse" aria-hidden="true"></i>');
-			$('#blog_nav_admin').prepend('<i class="fa fa-list" aria-hidden="true"></i>');
-			$('#blog_nav_myyoulian').prepend('<i class="fa fa-link" aria-hidden="true"></i>');
-			$('#blog_nav_myzanshang').prepend('<i class="fa fa-heart" aria-hidden="true"></i>');
-			$('#blog_nav_myguanyu').prepend('<i class="fa fa-leaf" aria-hidden="true"></i>');
-
-			//添加li内嵌ui
-			let guanyu = '<ul class="sub-menu">' +
-					'<li><a href="https://www.cnblogs.com/zouwangblog/articles/11157339.html "><i class="fa fa-meetup" aria-hidden="true"></i> 我？</a></li>' +
-					'<li><a href="https://www.cnblogs.com/zouwangblog/articles/11346906.html "><i class="fa fa-area-chart" aria-hidden="true"></i> 统计</a></li>' +
-					'<li><a href="https://www.cnblogs.com/zouwangblog/articles/11350777.html "><i class="fa fa-heartbeat" aria-hidden="true"></i> 监控</a></li>' +
-					'<li><a href="https://www.cnblogs.com/zouwangblog/p/11541835.html "><i class="iconfont icon-taohua" aria-hidden="true"></i> 主题</a></li>' +
-					'</ul>';
-			$('#blog_nav_myguanyu').after(guanyu);
-
 		}
 
 		/**
