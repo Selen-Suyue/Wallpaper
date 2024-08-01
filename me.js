@@ -271,17 +271,32 @@
 					$('.cd-top').css('top', '-900px');
 				}
 			});
+
+
+			$("#navList").append('<li><a id="blog_nav_myyoulian" class="menu" href="https://www.cnblogs.com/zouwangblog/articles/11177049.html">友链</a><i></i></li><li><a id="blog_nav_myzanshang" class="menu" href="https://www.cnblogs.com/zouwangblog/articles/11340077.html">赞赏</a><i></i></li><li><a id="blog_nav_myguanyu" class="menu" href="">关于</a><i></i></li>');
+			//添加标签icon
+			$('#blog_nav_myhome').prepend('<i class="fa fa-fort-awesome" aria-hidden="true"></i>');
+			$('#blog_nav_contact').prepend('<i class="fa fa-address-book-o" aria-hidden="true"></i>');
+			$('#blog_nav_rss').prepend('<i class="fa fa-rss faa-pulse" aria-hidden="true"></i>');
+			$('#blog_nav_admin').prepend('<i class="fa fa-list" aria-hidden="true"></i>');
+			$('#blog_nav_myyoulian').prepend('<i class="fa fa-link" aria-hidden="true"></i>');
+			$('#blog_nav_myzanshang').prepend('<i class="fa fa-heart" aria-hidden="true"></i>');
+			$('#blog_nav_myguanyu').prepend('<i class="fa fa-leaf" aria-hidden="true"></i>');
+
+			//添加li内嵌ui
+			let guanyu = '<ul class="sub-menu">' +
+					'<li><a href="https://www.cnblogs.com/zouwangblog/articles/11157339.html "><i class="fa fa-meetup" aria-hidden="true"></i> 我？</a></li>' +
+					'<li><a href="https://www.cnblogs.com/zouwangblog/articles/11346906.html "><i class="fa fa-area-chart" aria-hidden="true"></i> 统计</a></li>' +
+					'<li><a href="https://www.cnblogs.com/zouwangblog/articles/11350777.html "><i class="fa fa-heartbeat" aria-hidden="true"></i> 监控</a></li>' +
+					'<li><a href="https://www.cnblogs.com/zouwangblog/p/11541835.html "><i class="iconfont icon-taohua" aria-hidden="true"></i> 主题</a></li>' +
+					'</ul>';
+			$('#blog_nav_myguanyu').after(guanyu);
+
 		}
 
 		/**
 		 * 构建主题版权信息
 		 */
-		buildCopyright() {
-			//这里能保留么，算是我的一个小心愿。
-			var content = `<div> Powered By <a href="https://www.cnblogs.com" target="_blank">Cnblogs</a> |
-            Theme <a href="https://github.com/Zou-Wang/CNblogs-Theme-Sakura" target="_blank">Toretto v${this.version}</a></div>`;
-			$(this.cnblogs.footer).append(content);
-		}
 
 		/**
 		 * 构建博客签名
@@ -938,16 +953,6 @@
 			$('.postTitle').css('display', 'none');
 			let post_date = $('#post-date').text() //发布时间
 			let post_view_count = $('#post_view_count').text() //阅读数
-			if (window.location.href.indexOf('articles') === -1) {
-				var header =
-						`<p class="entry-census"><span><a href="https://www.cnblogs.com/zouwangblog/"><img src="//pic.cnblogs.com/face/1646268/20190628143903.png"></a></span><span><a href="https://www.cnblogs.com/zouwangblog/">Toretto</a></span><span class="bull">·</span>${post_date}<span class="bull">·</span>${post_view_count} 次阅读</p>`;
-				$('.pattern-header').append(header)
-				$('.pattern-center').addClass('single-center')
-				$('.pattern-header').addClass('single-header')
-			} else {
-				return
-			}
-
 		}
 
 		/**
