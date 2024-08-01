@@ -271,7 +271,15 @@
 					$('.cd-top').css('top', '-900px');
 				}
 			});
-
+			$("#navList").append('<li><a id="" class="menu" href="https://www.cnblogs.com/SelenBlog/">);
+			//添加标签icon
+			$('#blog_nav_myhome').prepend('<i class="fa fa-fort-awesome" aria-hidden="true"></i>');
+			$('#blog_nav_contact').prepend('<i class="fa fa-address-book-o" aria-hidden="true"></i>');
+			$('#blog_nav_rss').prepend('<i class="fa fa-rss faa-pulse" aria-hidden="true"></i>');
+			$('#blog_nav_admin').prepend('<i class="fa fa-list" aria-hidden="true"></i>');
+			$('#blog_nav_myyoulian').prepend('<i class="fa fa-link" aria-hidden="true"></i>');
+			$('#blog_nav_myzanshang').prepend('<i class="fa fa-heart" aria-hidden="true"></i>');
+			$('#blog_nav_myguanyu').prepend('<i class="fa fa-leaf" aria-hidden="true"></i>')
 		}
 
 		/**
